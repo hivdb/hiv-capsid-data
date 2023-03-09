@@ -90,6 +90,22 @@ df = read.csv('correlation_data.csv') %>% mutate(subtype=Subtype.Chi.square, HLA
 model = rfit(Entropy ~ subtype + HLA, data=df)
 summary(model)
 confint(model)
+
+df = df %>% filter(Entropy > 0)
+spearman = cor.test(df$Entropy, df$subtype, method = "spearman")
+print("Entropy x Subtype chi-square test")
+print(spearman)
+
+df = df %>% filter(Entropy > 0)
+spearman = cor.test(df$Entropy, df$HLA, method = "spearman")
+print("Entropy x #HLA Reference")
+print(spearman)
+
+df = df %>% filter(Entropy > 0)
+spearman = cor.test(df$subtype, df$HLA, method = "spearman")
+print("Subtype chi-square test x #HLA Reference")
+print(spearman)
+
 ```
 
 ## Subtype chi-square test and #HLA Reference with interaction, Rfit
@@ -102,23 +118,32 @@ confint(model)
 ```
 
 ## Subtype chi-square test and HLA chi-square test mean, Rfit
-Positions without HLA Chi-square test were excluded.
+
+Positions without HLA Chi-square test were treated as 0.
+
 ```{r sct-hct-mean}
 df = read.csv('correlation_data.csv') %>% 
   mutate(subtype=Subtype.Chi.square, HLA=HLA.Chi.square.mean) %>%
-  filter(HLA != '')
+  mutate(HLA=replace_na(HLA, 0))
 
 model = rfit(Entropy ~ subtype + HLA, data=df)
 summary(model)
 confint(model)
+
+df = df %>% filter(Entropy > 0) 
+spearman = cor.test(df$Entropy, df$HLA, method = "spearman")
+print("Entropy x HLA chi-square test mean")
+print(spearman)
 ```
 
 ## Subtype chi-square test and HLA chi-square test mean with interaction, Rfit
-Positions without HLA Chi-square test were excluded.
+
+Positions without HLA Chi-square test were treated as 0.
+
 ```{r sct-hct-mean-inter}
 df = read.csv('correlation_data.csv') %>% 
   mutate(subtype=Subtype.Chi.square, HLA=HLA.Chi.square.mean) %>%
-  filter(HLA != '')
+  mutate(HLA=replace_na(HLA, 0))
 
 model = rfit(Entropy ~ subtype * HLA, data=df)
 summary(model)
@@ -126,23 +151,32 @@ confint(model)
 ```
 
 ## Subtype chi-square test and HLA chi-square test sum, Rfit
-Positions without HLA Chi-square test were excluded.
+
+Positions without HLA Chi-square test were treated as 0.
+
 ```{r sct-hct-sum}
 df = read.csv('correlation_data.csv') %>% 
   mutate(subtype=Subtype.Chi.square, HLA=HLA.Chi.square.sum) %>%
-  filter(HLA != '')
+  mutate(HLA=replace_na(HLA, 0))
 
 model = rfit(Entropy ~ subtype + HLA, data=df)
 summary(model)
 confint(model)
+
+df = df %>% filter(Entropy > 0)
+spearman = cor.test(df$Entropy, df$HLA, method = "spearman")
+print("Entropy x HLA chi-square test sum")
+print(spearman)
 ```
 
 ## Subtype chi-square test and HLA chi-square test sum with interaction, Rfit
-Positions without HLA Chi-square test were excluded.
+
+Positions without HLA Chi-square test were treated as 0.
+
 ```{r sct-hct-sum-inter}
 df = read.csv('correlation_data.csv') %>% 
   mutate(subtype=Subtype.Chi.square, HLA=HLA.Chi.square.sum) %>%
-  filter(HLA != '')
+  mutate(HLA=replace_na(HLA, 0))
 
 model = rfit(Entropy ~ subtype * HLA, data=df)
 summary(model)
@@ -151,23 +185,32 @@ confint(model)
 
 
 ## Subtype chi-square test and HLA chi-square test median, Rfit
-Positions without HLA Chi-square test were excluded.
+
+Positions without HLA Chi-square test were treated as 0.
+
 ```{r sct-hct-median}
 df = read.csv('correlation_data.csv') %>% 
   mutate(subtype=Subtype.Chi.square, HLA=HLA.Chi.square.median) %>%
-  filter(HLA != '')
+  mutate(HLA=replace_na(HLA, 0))
 
 model = rfit(Entropy ~ subtype + HLA, data=df)
 summary(model)
 confint(model)
+
+df = df %>% filter(Entropy > 0)
+spearman = cor.test(df$Entropy, df$HLA, method = "spearman")
+print("Entropy x HLA chi-square test median")
+print(spearman)
 ```
 
 ## Subtype chi-square test and HLA chi-square test median with interaction, Rfit
-Positions without HLA Chi-square test were excluded.
+
+Positions without HLA Chi-square test were treated as 0.
+
 ```{r sct-hct-median-inter}
 df = read.csv('correlation_data.csv') %>% 
   mutate(subtype=Subtype.Chi.square, HLA=HLA.Chi.square.median) %>%
-  filter(HLA != '')
+  mutate(HLA=replace_na(HLA, 0))
 
 model = rfit(Entropy ~ subtype * HLA, data=df)
 summary(model)

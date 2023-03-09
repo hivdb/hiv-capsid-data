@@ -1,2 +1,2 @@
-# hiv-capsid-data
-HIV capsid data
+# HIV capsid data
+
