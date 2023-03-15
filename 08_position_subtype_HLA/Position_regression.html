@@ -366,7 +366,7 @@ pre code {
 </div>
 
 
-<p>Report generated at: 03/09/2023 10:37 AM PDT</p>
+<p>Report generated at: 03/15/2023 03:59 PM PDT</p>
 <div id="meaning-of-correlation_data.csv" class="section level2">
 <h2>Meaning of correlation_data.csv</h2>
 <ul>
@@ -379,14 +379,6 @@ subtypes and mutations &gt;= 0.1% in any subtype.
 <li>Subtype Chi-square rank: Subtype chi-square rank number</li>
 </ul></li>
 <li>HLA References: Number of HLA References</li>
-<li>HLA Chi-square was calculated by the contigency table of mutations
-and HLA coexist or not.
-<ul>
-<li>HLA Chi-square sum: sum of HLA Chi-square test by position</li>
-<li>HLA Chi-square median: median of HLA Chi-square test by
-position</li>
-<li>HLA Chi-square mean: mean of HLA Chi-square test by position</li>
-</ul></li>
 </ul>
 </div>
 <div id="subtype-chi-square-test-rank-and-hla-reference-regression" class="section level2">
@@ -397,23 +389,23 @@ position</li>
 ## 
 ## Residuals:
 ##      Min       1Q   Median       3Q      Max 
-## -0.56385 -0.12690 -0.02958  0.13388  1.19403 
+## -0.63064 -0.12129  0.04776  0.04776  1.20449 
 ## 
 ## Coefficients:
-##                Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)  -0.1338762  0.0311620  -4.296 2.57e-05 ***
-## subtype_rank  0.0020442  0.0002837   7.206 8.36e-12 ***
-## HLA           0.1178779  0.0108985  10.816  &lt; 2e-16 ***
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  -0.050997   0.023846  -2.139   0.0335 *  
+## subtype_rank  0.001616   0.000244   6.622 2.51e-10 ***
+## HLA           0.116175   0.011516  10.088  &lt; 2e-16 ***
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
-## Residual standard error: 0.2441 on 228 degrees of freedom
-## Multiple R-squared:  0.6424, Adjusted R-squared:  0.6393 
-## F-statistic: 204.8 on 2 and 228 DF,  p-value: &lt; 2.2e-16</code></pre>
+## Residual standard error: 0.2477 on 228 degrees of freedom
+## Multiple R-squared:  0.6318, Adjusted R-squared:  0.6286 
+## F-statistic: 195.6 on 2 and 228 DF,  p-value: &lt; 2.2e-16</code></pre>
 <pre><code>##                     2.5 %       97.5 %
-## (Intercept)  -0.195278423 -0.072473935
-## subtype_rank  0.001485233  0.002603209
-## HLA           0.096403228  0.139352640</code></pre>
+## (Intercept)  -0.097984402 -0.004009202
+## subtype_rank  0.001135112  0.002096718
+## HLA           0.093484362  0.138866266</code></pre>
 </div>
 <div id="subtype-chi-square-test-rank-and-hla-reference-with-interaction-regression" class="section level2">
 <h2>Subtype chi-square test rank and #HLA Reference with interaction,
@@ -424,25 +416,25 @@ regression</h2>
 ## 
 ## Residuals:
 ##      Min       1Q   Median       3Q      Max 
-## -0.48690 -0.10966 -0.02180  0.08262  1.13432 
+## -0.57387 -0.12035  0.02421  0.02421  1.12006 
 ## 
 ## Coefficients:
 ##                    Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)      -0.0826202  0.0268265  -3.080  0.00233 ** 
-## subtype_rank      0.0016648  0.0002426   6.862 6.38e-11 ***
-## HLA              -0.2973392  0.0439839  -6.760 1.15e-10 ***
-## subtype_rank:HLA  0.0021558  0.0002233   9.654  &lt; 2e-16 ***
+## (Intercept)      -0.0273060  0.0190108  -1.436    0.152    
+## subtype_rank      0.0015486  0.0001935   8.003 6.22e-14 ***
+## HLA              -0.4757497  0.0515918  -9.221  &lt; 2e-16 ***
+## subtype_rank:HLA  0.0029941  0.0002568  11.657  &lt; 2e-16 ***
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
-## Residual standard error: 0.206 on 227 degrees of freedom
-## Multiple R-squared:  0.7465, Adjusted R-squared:  0.7431 
-## F-statistic: 222.8 on 3 and 227 DF,  p-value: &lt; 2.2e-16</code></pre>
+## Residual standard error: 0.1963 on 227 degrees of freedom
+## Multiple R-squared:  0.7697, Adjusted R-squared:  0.7666 
+## F-statistic: 252.8 on 3 and 227 DF,  p-value: &lt; 2.2e-16</code></pre>
 <pre><code>##                         2.5 %       97.5 %
-## (Intercept)      -0.135481059 -0.029759398
-## subtype_rank      0.001186735  0.002142787
-## HLA              -0.384008123 -0.210670364
-## subtype_rank:HLA  0.001715745  0.002595809</code></pre>
+## (Intercept)      -0.064766143  0.010154241
+## subtype_rank      0.001167346  0.001929919
+## HLA              -0.577409861 -0.374089615
+## subtype_rank:HLA  0.002488011  0.003500237</code></pre>
 </div>
 <div id="subtype-chi-square-test-and-hla-reference-rfit" class="section level2">
 <h2>Subtype chi-square test and #HLA Reference, Rfit</h2>
@@ -451,14 +443,14 @@ regression</h2>
 ## 
 ## Coefficients:
 ##                Estimate  Std. Error t.value p.value    
-## (Intercept) -5.8438e-17  1.1234e-03   0.000       1    
-## subtype      6.2512e-05  5.4316e-07 115.090  &lt;2e-16 ***
-## HLA          7.6848e-02  1.2307e-03  62.444  &lt;2e-16 ***
+## (Intercept) -1.3149e-16  1.0396e-03   0.000       1    
+## subtype      6.2657e-05  5.1691e-07 121.213  &lt;2e-16 ***
+## HLA          7.6844e-02  1.1701e-03  65.673  &lt;2e-16 ***
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
-## Multiple R-squared (Robust): 0.9269855 
-## Reduction in Dispersion Test: 1447.334 p-value: 0</code></pre>
+## Multiple R-squared (Robust): 0.9305885 
+## Reduction in Dispersion Test: 1528.378 p-value: 0</code></pre>
 <pre><code>##             2.5 % 97.5 %
 ## (Intercept)    NA     NA
 ## subtype        NA     NA
@@ -468,11 +460,11 @@ regression</h2>
 ##  Spearman&#39;s rank correlation rho
 ## 
 ## data:  df$Entropy and df$subtype
-## S = 31776, p-value &lt; 2.2e-16
+## S = 24496, p-value &lt; 2.2e-16
 ## alternative hypothesis: true rho is not equal to 0
 ## sample estimates:
 ##       rho 
-## 0.9023779</code></pre>
+## 0.9247435</code></pre>
 <pre><code>## Warning in cor.test.default(df$Entropy, df$HLA, method = &quot;spearman&quot;): Cannot
 ## compute exact p-value with ties</code></pre>
 <pre><code>## [1] &quot;Entropy x #HLA Reference&quot;</code></pre>
@@ -492,11 +484,11 @@ regression</h2>
 ##  Spearman&#39;s rank correlation rho
 ## 
 ## data:  df$subtype and df$HLA
-## S = 134364, p-value = 6.13e-13
+## S = 122891, p-value = 9.243e-15
 ## alternative hypothesis: true rho is not equal to 0
 ## sample estimates:
 ##       rho 
-## 0.5872064</code></pre>
+## 0.6224559</code></pre>
 </div>
 <div id="subtype-chi-square-test-and-hla-reference-with-interaction-rfit" class="section level2">
 <h2>Subtype chi-square test and #HLA Reference with interaction,
@@ -506,191 +498,92 @@ Rfit</h2>
 ## 
 ## Coefficients:
 ##                Estimate  Std. Error t.value p.value    
-## (Intercept)  0.0000e+00  1.2336e-03   0.000       1    
-## subtype      7.2086e-05  8.0823e-07  89.190  &lt;2e-16 ***
-## HLA          7.9148e-02  1.4551e-03  54.392  &lt;2e-16 ***
-## subtype:HLA -2.9382e-06  2.3027e-07 -12.760  &lt;2e-16 ***
+## (Intercept) -5.8438e-17  1.1320e-03   0.000       1    
+## subtype      7.2222e-05  7.7067e-07  93.713  &lt;2e-16 ***
+## HLA          7.8699e-02  1.3823e-03  56.933  &lt;2e-16 ***
+## subtype:HLA -2.9140e-06  2.1971e-07 -13.263  &lt;2e-16 ***
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
-## Multiple R-squared (Robust): 0.9287019 
-## Reduction in Dispersion Test: 985.6047 p-value: 0</code></pre>
+## Multiple R-squared (Robust): 0.9320679 
+## Reduction in Dispersion Test: 1038.191 p-value: 0</code></pre>
 <pre><code>##             2.5 % 97.5 %
 ## (Intercept)    NA     NA
 ## subtype        NA     NA
 ## HLA            NA     NA
 ## subtype:HLA    NA     NA</code></pre>
-</div>
-<div id="subtype-chi-square-test-and-hla-chi-square-test-mean-rfit" class="section level2">
-<h2>Subtype chi-square test and HLA chi-square test mean, Rfit</h2>
-<p>Positions without HLA Chi-square test were excluded.</p>
-<pre><code>## Call:
-## rfit.default(formula = Entropy ~ subtype + HLA, data = df)
-## 
-## Coefficients:
-##               Estimate Std. Error t.value p.value    
-## (Intercept) 2.9219e-17 2.2131e-03   0.000       1    
-## subtype     7.5609e-05 5.6105e-07 134.763  &lt;2e-16 ***
-## HLA         2.9159e-03 1.0026e-04  29.084  &lt;2e-16 ***
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Multiple R-squared (Robust): 0.9052548 
-## Reduction in Dispersion Test: 1089.227 p-value: 0</code></pre>
-<pre><code>##             2.5 % 97.5 %
-## (Intercept)    NA     NA
-## subtype        NA     NA
-## HLA            NA     NA</code></pre>
-<pre><code>## Warning in cor.test.default(df$Entropy, df$HLA, method = &quot;spearman&quot;): Cannot
-## compute exact p-value with ties</code></pre>
-<pre><code>## [1] &quot;Entropy x HLA chi-square test mean&quot;</code></pre>
-<pre><code>## 
-##  Spearman&#39;s rank correlation rho
-## 
-## data:  df$Entropy and df$HLA
-## S = 111998, p-value &lt; 2.2e-16
-## alternative hypothesis: true rho is not equal to 0
-## sample estimates:
-##       rho 
-## 0.6559213</code></pre>
-</div>
-<div id="subtype-chi-square-test-and-hla-chi-square-test-mean-with-interaction-rfit" class="section level2">
-<h2>Subtype chi-square test and HLA chi-square test mean with
-interaction, Rfit</h2>
-<p>Positions without HLA Chi-square test were excluded.</p>
-<pre><code>## Call:
-## rfit.default(formula = Entropy ~ subtype * HLA, data = df)
-## 
-## Coefficients:
-##                Estimate  Std. Error t.value p.value    
-## (Intercept) -2.9219e-17  2.0472e-03   0.000       1    
-## subtype      8.2192e-05  6.3863e-07 128.702  &lt;2e-16 ***
-## HLA          3.4629e-03  1.0877e-04  31.837  &lt;2e-16 ***
-## subtype:HLA -3.2708e-07  1.3722e-08 -23.835  &lt;2e-16 ***
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Multiple R-squared (Robust): 0.9142012 
-## Reduction in Dispersion Test: 806.2413 p-value: 0</code></pre>
-<pre><code>##             2.5 % 97.5 %
-## (Intercept)    NA     NA
-## subtype        NA     NA
-## HLA            NA     NA
-## subtype:HLA    NA     NA</code></pre>
-</div>
-<div id="subtype-chi-square-test-and-hla-chi-square-test-sum-rfit" class="section level2">
-<h2>Subtype chi-square test and HLA chi-square test sum, Rfit</h2>
-<p>Positions without HLA Chi-square test were excluded.</p>
-<pre><code>## Call:
-## rfit.default(formula = Entropy ~ subtype + HLA, data = df)
-## 
-## Coefficients:
-##               Estimate Std. Error t.value p.value    
-## (Intercept) 5.8438e-17 3.1364e-03   0.000       1    
-## subtype     7.8080e-05 5.4985e-07 142.004  &lt;2e-16 ***
-## HLA         1.8285e-04 5.7771e-06  31.651  &lt;2e-16 ***
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Multiple R-squared (Robust): 0.9028929 
-## Reduction in Dispersion Test: 1059.962 p-value: 0</code></pre>
-<pre><code>##             2.5 % 97.5 %
-## (Intercept)    NA     NA
-## subtype        NA     NA
-## HLA            NA     NA</code></pre>
-<pre><code>## Warning in cor.test.default(df$Entropy, df$HLA, method = &quot;spearman&quot;): Cannot
-## compute exact p-value with ties</code></pre>
-<pre><code>## [1] &quot;Entropy x HLA chi-square test sum&quot;</code></pre>
-<pre><code>## 
-##  Spearman&#39;s rank correlation rho
-## 
-## data:  df$Entropy and df$HLA
-## S = 100765, p-value &lt; 2.2e-16
-## alternative hypothesis: true rho is not equal to 0
-## sample estimates:
-##       rho 
-## 0.6904308</code></pre>
-</div>
-<div id="subtype-chi-square-test-and-hla-chi-square-test-sum-with-interaction-rfit" class="section level2">
-<h2>Subtype chi-square test and HLA chi-square test sum with
-interaction, Rfit</h2>
-<p>Positions without HLA Chi-square test were excluded.</p>
-<pre><code>## Call:
-## rfit.default(formula = Entropy ~ subtype * HLA, data = df)
-## 
-## Coefficients:
-##                Estimate  Std. Error  t.value   p.value    
-## (Intercept)  2.9219e-17  3.1439e-03   0.0000         1    
-## subtype      7.8231e-05  6.2317e-07 125.5368 &lt; 2.2e-16 ***
-## HLA          2.0667e-04  6.7800e-06  30.4816 &lt; 2.2e-16 ***
-## subtype:HLA -7.9189e-09  1.4087e-09  -5.6214  5.53e-08 ***
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Multiple R-squared (Robust): 0.9041674 
-## Reduction in Dispersion Test: 713.9042 p-value: 0</code></pre>
-<pre><code>##             2.5 % 97.5 %
-## (Intercept)    NA     NA
-## subtype        NA     NA
-## HLA            NA     NA
-## subtype:HLA    NA     NA</code></pre>
-</div>
-<div id="subtype-chi-square-test-and-hla-chi-square-test-median-rfit" class="section level2">
-<h2>Subtype chi-square test and HLA chi-square test median, Rfit</h2>
-<p>Positions without HLA Chi-square test were excluded.</p>
-<pre><code>## Call:
-## rfit.default(formula = Entropy ~ subtype + HLA, data = df)
-## 
-## Coefficients:
-##               Estimate Std. Error t.value p.value    
-## (Intercept) 5.8438e-17 2.8518e-03   0.000       1    
-## subtype     7.6371e-05 5.7197e-07 133.521  &lt;2e-16 ***
-## HLA         1.9869e-03 1.2363e-04  16.072  &lt;2e-16 ***
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Multiple R-squared (Robust): 0.9037111 
-## Reduction in Dispersion Test: 1069.937 p-value: 0</code></pre>
-<pre><code>##             2.5 % 97.5 %
-## (Intercept)    NA     NA
-## subtype        NA     NA
-## HLA            NA     NA</code></pre>
-<pre><code>## Warning in cor.test.default(df$Entropy, df$HLA, method = &quot;spearman&quot;): Cannot
-## compute exact p-value with ties</code></pre>
-<pre><code>## [1] &quot;Entropy x HLA chi-square test median&quot;</code></pre>
-<pre><code>## 
-##  Spearman&#39;s rank correlation rho
-## 
-## data:  df$Entropy and df$HLA
-## S = 116186, p-value = 6.176e-16
-## alternative hypothesis: true rho is not equal to 0
-## sample estimates:
-##       rho 
-## 0.6430541</code></pre>
-</div>
-<div id="subtype-chi-square-test-and-hla-chi-square-test-median-with-interaction-rfit" class="section level2">
-<h2>Subtype chi-square test and HLA chi-square test median with
-interaction, Rfit</h2>
-<p>Positions without HLA Chi-square test were excluded.</p>
-<pre><code>## Call:
-## rfit.default(formula = Entropy ~ subtype * HLA, data = df)
-## 
-## Coefficients:
-##                Estimate  Std. Error t.value p.value    
-## (Intercept)  5.8438e-17  1.1743e-03   0.000       1    
-## subtype      8.1888e-05  6.3661e-07 128.633  &lt;2e-16 ***
-## HLA          4.6894e-03  1.4180e-04  33.069  &lt;2e-16 ***
-## subtype:HLA -3.9776e-07  1.4684e-08 -27.087  &lt;2e-16 ***
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Multiple R-squared (Robust): 0.9124757 
-## Reduction in Dispersion Test: 788.8555 p-value: 0</code></pre>
-<pre><code>##             2.5 % 97.5 %
-## (Intercept)    NA     NA
-## subtype        NA     NA
-## HLA            NA     NA
-## subtype:HLA    NA     NA</code></pre>
+<!-- ## Subtype chi-square test and HLA chi-square test mean, Rfit -->
+<!-- Positions without HLA Chi-square test were treated as 0. -->
+<!-- ```{r sct-hct-mean} -->
+<!-- adf = read.csv('correlation_data.csv') %>%  -->
+<!--   mutate(subtype=Subtype.Chi.square, HLA=HLA.Chi.square.mean) %>% -->
+<!--   mutate(HLA=replace_na(HLA, 0)) -->
+<!-- model = rfit(Entropy ~ subtype + HLA, data=df) -->
+<!-- summary(model) -->
+<!-- confint(model) -->
+<!-- df = df %>% filter(Entropy > 0)  -->
+<!-- spearman = cor.test(df$Entropy, df$HLA, method = "spearman") -->
+<!-- print("Entropy x HLA chi-square test mean") -->
+<!-- print(spearman) -->
+<!-- ``` -->
+<!-- ## Subtype chi-square test and HLA chi-square test mean with interaction, Rfit -->
+<!-- Positions without HLA Chi-square test were treated as 0. -->
+<!-- ```{r sct-hct-mean-inter} -->
+<!-- df = read.csv('correlation_data.csv') %>%  -->
+<!--   mutate(subtype=Subtype.Chi.square, HLA=HLA.Chi.square.mean) %>% -->
+<!--   mutate(HLA=replace_na(HLA, 0)) -->
+<!-- model = rfit(Entropy ~ subtype * HLA, data=df) -->
+<!-- summary(model) -->
+<!-- confint(model) -->
+<!-- ``` -->
+<!-- ## Subtype chi-square test and HLA chi-square test sum, Rfit -->
+<!-- Positions without HLA Chi-square test were treated as 0. -->
+<!-- ```{r sct-hct-sum} -->
+<!-- df = read.csv('correlation_data.csv') %>%  -->
+<!--   mutate(subtype=Subtype.Chi.square, HLA=HLA.Chi.square.sum) %>% -->
+<!--   mutate(HLA=replace_na(HLA, 0)) -->
+<!-- model = rfit(Entropy ~ subtype + HLA, data=df) -->
+<!-- summary(model) -->
+<!-- confint(model) -->
+<!-- df = df %>% filter(Entropy > 0) -->
+<!-- spearman = cor.test(df$Entropy, df$HLA, method = "spearman") -->
+<!-- print("Entropy x HLA chi-square test sum") -->
+<!-- print(spearman) -->
+<!-- ``` -->
+<!-- ## Subtype chi-square test and HLA chi-square test sum with interaction, Rfit -->
+<!-- Positions without HLA Chi-square test were treated as 0. -->
+<!-- ```{r sct-hct-sum-inter} -->
+<!-- df = read.csv('correlation_data.csv') %>%  -->
+<!--   mutate(subtype=Subtype.Chi.square, HLA=HLA.Chi.square.sum) %>% -->
+<!--   mutate(HLA=replace_na(HLA, 0)) -->
+<!-- model = rfit(Entropy ~ subtype * HLA, data=df) -->
+<!-- summary(model) -->
+<!-- confint(model) -->
+<!-- ``` -->
+<!-- ## Subtype chi-square test and HLA chi-square test median, Rfit -->
+<!-- Positions without HLA Chi-square test were treated as 0. -->
+<!-- ```{r sct-hct-median} -->
+<!-- df = read.csv('correlation_data.csv') %>%  -->
+<!--   mutate(subtype=Subtype.Chi.square, HLA=HLA.Chi.square.median) %>% -->
+<!--   mutate(HLA=replace_na(HLA, 0)) -->
+<!-- model = rfit(Entropy ~ subtype + HLA, data=df) -->
+<!-- summary(model) -->
+<!-- confint(model) -->
+<!-- df = df %>% filter(Entropy > 0) -->
+<!-- spearman = cor.test(df$Entropy, df$HLA, method = "spearman") -->
+<!-- print("Entropy x HLA chi-square test median") -->
+<!-- print(spearman) -->
+<!-- ``` -->
+<!-- ## Subtype chi-square test and HLA chi-square test median with interaction, Rfit -->
+<!-- Positions without HLA Chi-square test were treated as 0. -->
+<!-- ```{r sct-hct-median-inter} -->
+<!-- df = read.csv('correlation_data.csv') %>%  -->
+<!--   mutate(subtype=Subtype.Chi.square, HLA=HLA.Chi.square.median) %>% -->
+<!--   mutate(HLA=replace_na(HLA, 0)) -->
+<!-- model = rfit(Entropy ~ subtype * HLA, data=df) -->
+<!-- summary(model) -->
+<!-- confint(model) -->
+<!-- ``` -->
 </div>
 
 
