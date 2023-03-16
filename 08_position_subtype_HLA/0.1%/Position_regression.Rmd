@@ -53,34 +53,33 @@ apply_theme <- function(p) {
 - Entropy: entropy of mutations >= 0.1%
 - Subtype Chi-square test was calculated by contigency table of subtypes and mutations >= 0.1% in any subtype.
   - Subtype Chi-square
-  - Subtype Chi-square rank: Subtype chi-square rank number
 - HLA References: Number of HLA References
 
-## Subtype chi-square test rank and #HLA Reference, regression
-```{r sct-rank-hla}
-df = read.csv('correlation_data.csv') %>% mutate(subtype_rank=Subtype.Chi.square_rank, HLA=HLA.References)
+<!-- ## Subtype chi-square test rank and #HLA Reference, regression -->
+<!-- ```{r sct-rank-hla} -->
+<!-- df = read.csv('correlation_data.csv') %>% mutate(subtype_rank=Subtype.Chi.square_rank, HLA=HLA.References) -->
 
-model = lm(Entropy ~ subtype_rank + HLA, data=df)
-summary(model)
-confint(model)
+<!-- model = lm(Entropy ~ subtype_rank + HLA, data=df) -->
+<!-- summary(model) -->
+<!-- confint(model) -->
 
-# ggPredict(model,se=TRUE,interactive=TRUE)
-```
+<!-- # ggPredict(model,se=TRUE,interactive=TRUE) -->
+<!-- ``` -->
 
-## Subtype chi-square test rank and #HLA Reference with interaction, regression
-```{r sct-rank-hla-inter}
-df = read.csv('correlation_data.csv') %>% mutate(subtype_rank=Subtype.Chi.square_rank, HLA=HLA.References)
+<!-- ## Subtype chi-square test rank and #HLA Reference with interaction, regression -->
+<!-- ```{r sct-rank-hla-inter} -->
+<!-- df = read.csv('correlation_data.csv') %>% mutate(subtype_rank=Subtype.Chi.square_rank, HLA=HLA.References) -->
 
-model = lm(Entropy ~ subtype_rank * HLA, data=df)
-summary(model)
-confint(model)
+<!-- model = lm(Entropy ~ subtype_rank * HLA, data=df) -->
+<!-- summary(model) -->
+<!-- confint(model) -->
 
-# ggPredict(model,se=TRUE,interactive=TRUE)
-```
+<!-- # ggPredict(model,se=TRUE,interactive=TRUE) -->
+<!-- ``` -->
 
 ## Subtype chi-square test and #HLA Reference, Rfit
 ```{r sct-hla}
-df = read.csv('correlation_data.csv') %>% mutate(subtype=Subtype.Chi.square, HLA=HLA.References)
+df = read.csv('correlation_data.csv') %>% mutate(subtype=Subtype.Chi.square, HLA=HLA.References) %>% filter(Entropy > 0)
 
 model = rfit(Entropy ~ subtype + HLA, data=df)
 summary(model)
@@ -105,7 +104,7 @@ print(spearman)
 
 ## Subtype chi-square test and #HLA Reference with interaction, Rfit
 ```{r sct-hla-inter}
-df = read.csv('correlation_data.csv') %>% mutate(subtype=Subtype.Chi.square, HLA=HLA.References)
+df = read.csv('correlation_data.csv') %>% mutate(subtype=Subtype.Chi.square, HLA=HLA.References) %>% filter(Entropy > 0)
 
 model = rfit(Entropy ~ subtype * HLA, data=df)
 summary(model)

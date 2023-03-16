@@ -5,7 +5,7 @@ output:
     keep_md: yes
 ---
 
-Report generated at: 03/15/2023 04:19 PM PDT
+Report generated at: 03/15/2023 07:02 PM PDT
 
 
 
@@ -15,72 +15,29 @@ Report generated at: 03/15/2023 04:19 PM PDT
 - Entropy: entropy of mutations >= 0.1%
 - Subtype Chi-square test was calculated by contigency table of subtypes and mutations >= 0.1% in any subtype.
   - Subtype Chi-square
-  - Subtype Chi-square rank: Subtype chi-square rank number
 - HLA References: Number of HLA References
 
-## Subtype chi-square test rank and #HLA Reference, regression
+<!-- ## Subtype chi-square test rank and #HLA Reference, regression -->
+<!-- ```{r sct-rank-hla} -->
+<!-- df = read.csv('correlation_data.csv') %>% mutate(subtype_rank=Subtype.Chi.square_rank, HLA=HLA.References) -->
 
-```
-## 
-## Call:
-## lm(formula = Entropy ~ subtype_rank + HLA, data = df)
-## 
-## Residuals:
-##      Min       1Q   Median       3Q      Max 
-## -0.49054 -0.12676  0.05899  0.05899  1.08086 
-## 
-## Coefficients:
-##                Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)  -0.0649727  0.0179847  -3.613 0.000373 ***
-## subtype_rank  0.0059825  0.0004743  12.614  < 2e-16 ***
-## HLA           0.0695970  0.0105914   6.571 3.35e-10 ***
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-## 
-## Residual standard error: 0.2075 on 228 degrees of freedom
-## Multiple R-squared:  0.7414,	Adjusted R-squared:  0.7391 
-## F-statistic: 326.8 on 2 and 228 DF,  p-value: < 2.2e-16
-```
+<!-- model = lm(Entropy ~ subtype_rank + HLA, data=df) -->
+<!-- summary(model) -->
+<!-- confint(model) -->
 
-```
-##                     2.5 %       97.5 %
-## (Intercept)  -0.100410075 -0.029535301
-## subtype_rank  0.005047985  0.006917091
-## HLA           0.048727501  0.090466598
-```
+<!-- # ggPredict(model,se=TRUE,interactive=TRUE) -->
+<!-- ``` -->
 
-## Subtype chi-square test rank and #HLA Reference with interaction, regression
+<!-- ## Subtype chi-square test rank and #HLA Reference with interaction, regression -->
+<!-- ```{r sct-rank-hla-inter} -->
+<!-- df = read.csv('correlation_data.csv') %>% mutate(subtype_rank=Subtype.Chi.square_rank, HLA=HLA.References) -->
 
-```
-## 
-## Call:
-## lm(formula = Entropy ~ subtype_rank * HLA, data = df)
-## 
-## Residuals:
-##      Min       1Q   Median       3Q      Max 
-## -0.49577 -0.06789  0.02419  0.02419  1.05375 
-## 
-## Coefficients:
-##                    Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)      -0.0290519  0.0157400  -1.846   0.0662 .  
-## subtype_rank      0.0048617  0.0004199  11.578  < 2e-16 ***
-## HLA              -0.1266590  0.0226494  -5.592 6.42e-08 ***
-## subtype_rank:HLA  0.0022689  0.0002403   9.441  < 2e-16 ***
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-## 
-## Residual standard error: 0.1763 on 227 degrees of freedom
-## Multiple R-squared:  0.8143,	Adjusted R-squared:  0.8119 
-## F-statistic: 331.8 on 3 and 227 DF,  p-value: < 2.2e-16
-```
+<!-- model = lm(Entropy ~ subtype_rank * HLA, data=df) -->
+<!-- summary(model) -->
+<!-- confint(model) -->
 
-```
-##                         2.5 %       97.5 %
-## (Intercept)      -0.060067012  0.001963226
-## subtype_rank      0.004034310  0.005689167
-## HLA              -0.171288986 -0.082028922
-## subtype_rank:HLA  0.001795338  0.002742393
-```
+<!-- # ggPredict(model,se=TRUE,interactive=TRUE) -->
+<!-- ``` -->
 
 ## Subtype chi-square test and #HLA Reference, Rfit
 
@@ -89,15 +46,15 @@ Report generated at: 03/15/2023 04:19 PM PDT
 ## rfit.default(formula = Entropy ~ subtype + HLA, data = df)
 ## 
 ## Coefficients:
-##                Estimate  Std. Error t.value p.value    
-## (Intercept) -1.3149e-16  1.0396e-03   0.000       1    
-## subtype      6.2657e-05  5.1691e-07 121.213  <2e-16 ***
-## HLA          7.6844e-02  1.1701e-03  65.673  <2e-16 ***
+##               Estimate Std. Error t.value p.value    
+## (Intercept) 2.8361e-02 1.2911e-02  2.1967 0.02993 *  
+## subtype     5.9898e-05 2.2199e-06 26.9826 < 2e-16 ***
+## HLA         7.2498e-02 5.4087e-03 13.4040 < 2e-16 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Multiple R-squared (Robust): 0.9305885 
-## Reduction in Dispersion Test: 1528.378 p-value: 0
+## Multiple R-squared (Robust): 0.807116 
+## Reduction in Dispersion Test: 255.2523 p-value: 0
 ```
 
 ```
@@ -172,16 +129,16 @@ Report generated at: 03/15/2023 04:19 PM PDT
 ## rfit.default(formula = Entropy ~ subtype * HLA, data = df)
 ## 
 ## Coefficients:
-##                Estimate  Std. Error t.value p.value    
-## (Intercept) -5.8438e-17  1.1320e-03   0.000       1    
-## subtype      7.2222e-05  7.7067e-07  93.713  <2e-16 ***
-## HLA          7.8699e-02  1.3823e-03  56.933  <2e-16 ***
-## subtype:HLA -2.9140e-06  2.1971e-07 -13.263  <2e-16 ***
+##                Estimate  Std. Error t.value   p.value    
+## (Intercept)  2.5544e-02  1.2673e-02  2.0156  0.046055 *  
+## subtype      6.8752e-05  3.1974e-06 21.5028 < 2.2e-16 ***
+## HLA          7.7168e-02  6.1905e-03 12.4656 < 2.2e-16 ***
+## subtype:HLA -2.5330e-06  9.0434e-07 -2.8009  0.005935 ** 
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Multiple R-squared (Robust): 0.9320679 
-## Reduction in Dispersion Test: 1038.191 p-value: 0
+## Multiple R-squared (Robust): 0.8217689 
+## Reduction in Dispersion Test: 185.9646 p-value: 0
 ```
 
 ```
