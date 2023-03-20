@@ -366,7 +366,7 @@ pre code {
 </div>
 
 
-<p>Report generated at: 03/15/2023 07:13 PM PDT</p>
+<p>Report generated at: 03/16/2023 07:03 PM PDT</p>
 <div id="meaning-of-correlation_data.csv" class="section level2">
 <h2>Meaning of correlation_data.csv</h2>
 <ul>
@@ -415,40 +415,6 @@ subtypes and mutations &gt;= 0.1% in any subtype.
 ## (Intercept)    NA     NA
 ## subtype        NA     NA
 ## HLA            NA     NA</code></pre>
-<pre><code>## [1] &quot;Entropy x Subtype chi-square test&quot;</code></pre>
-<pre><code>## 
-##  Spearman&#39;s rank correlation rho
-## 
-## data:  df$Entropy and df$subtype
-## S = 9818, p-value &lt; 2.2e-16
-## alternative hypothesis: true rho is not equal to 0
-## sample estimates:
-##       rho 
-## 0.8282215</code></pre>
-<pre><code>## Warning in cor.test.default(df$Entropy, df$HLA, method = &quot;spearman&quot;): Cannot
-## compute exact p-value with ties</code></pre>
-<pre><code>## [1] &quot;Entropy x #HLA Reference&quot;</code></pre>
-<pre><code>## 
-##  Spearman&#39;s rank correlation rho
-## 
-## data:  df$Entropy and df$HLA
-## S = 32450, p-value = 0.0001865
-## alternative hypothesis: true rho is not equal to 0
-## sample estimates:
-##       rho 
-## 0.4322406</code></pre>
-<pre><code>## Warning in cor.test.default(df$subtype, df$HLA, method = &quot;spearman&quot;): Cannot
-## compute exact p-value with ties</code></pre>
-<pre><code>## [1] &quot;Subtype chi-square test x #HLA Reference&quot;</code></pre>
-<pre><code>## 
-##  Spearman&#39;s rank correlation rho
-## 
-## data:  df$subtype and df$HLA
-## S = 45204, p-value = 0.08234
-## alternative hypothesis: true rho is not equal to 0
-## sample estimates:
-##       rho 
-## 0.2091036</code></pre>
 </div>
 <div id="subtype-chi-square-test-and-hla-reference-with-interaction-rfit" class="section level2">
 <h2>Subtype chi-square test and #HLA Reference with interaction,

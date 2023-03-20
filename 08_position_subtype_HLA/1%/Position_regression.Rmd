@@ -85,20 +85,20 @@ model = rfit(Entropy ~ subtype + HLA, data=df)
 summary(model)
 confint(model)
 
-df = df %>% filter(Entropy > 0)
-spearman = cor.test(df$Entropy, df$subtype, method = "spearman")
-print("Entropy x Subtype chi-square test")
-print(spearman)
-
-df = df %>% filter(Entropy > 0)
-spearman = cor.test(df$Entropy, df$HLA, method = "spearman")
-print("Entropy x #HLA Reference")
-print(spearman)
-
-df = df %>% filter(Entropy > 0)
-spearman = cor.test(df$subtype, df$HLA, method = "spearman")
-print("Subtype chi-square test x #HLA Reference")
-print(spearman)
+# df = df %>% filter(Entropy > 0)
+# spearman = cor.test(df$Entropy, df$subtype, method = "spearman")
+# print("Entropy x Subtype chi-square test")
+# print(spearman)
+# 
+# df = df %>% filter(Entropy > 0)
+# spearman = cor.test(df$Entropy, df$HLA, method = "spearman")
+# print("Entropy x #HLA Reference")
+# print(spearman)
+# 
+# df = df %>% filter(Entropy > 0)
+# spearman = cor.test(df$subtype, df$HLA, method = "spearman")
+# print("Subtype chi-square test x #HLA Reference")
+# print(spearman)
 
 ```
 

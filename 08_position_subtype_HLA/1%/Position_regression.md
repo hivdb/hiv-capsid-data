@@ -5,7 +5,7 @@ output:
     keep_md: yes
 ---
 
-Report generated at: 03/15/2023 07:13 PM PDT
+Report generated at: 03/16/2023 07:03 PM PDT
 
 
 
@@ -62,64 +62,6 @@ Report generated at: 03/15/2023 07:13 PM PDT
 ## (Intercept)    NA     NA
 ## subtype        NA     NA
 ## HLA            NA     NA
-```
-
-```
-## [1] "Entropy x Subtype chi-square test"
-```
-
-```
-## 
-## 	Spearman's rank correlation rho
-## 
-## data:  df$Entropy and df$subtype
-## S = 9818, p-value < 2.2e-16
-## alternative hypothesis: true rho is not equal to 0
-## sample estimates:
-##       rho 
-## 0.8282215
-```
-
-```
-## Warning in cor.test.default(df$Entropy, df$HLA, method = "spearman"): Cannot
-## compute exact p-value with ties
-```
-
-```
-## [1] "Entropy x #HLA Reference"
-```
-
-```
-## 
-## 	Spearman's rank correlation rho
-## 
-## data:  df$Entropy and df$HLA
-## S = 32450, p-value = 0.0001865
-## alternative hypothesis: true rho is not equal to 0
-## sample estimates:
-##       rho 
-## 0.4322406
-```
-
-```
-## Warning in cor.test.default(df$subtype, df$HLA, method = "spearman"): Cannot
-## compute exact p-value with ties
-```
-
-```
-## [1] "Subtype chi-square test x #HLA Reference"
-```
-
-```
-## 
-## 	Spearman's rank correlation rho
-## 
-## data:  df$subtype and df$HLA
-## S = 45204, p-value = 0.08234
-## alternative hypothesis: true rho is not equal to 0
-## sample estimates:
-##       rho 
-## 0.2091036
 ```
 
 ## Subtype chi-square test and #HLA Reference with interaction, Rfit
